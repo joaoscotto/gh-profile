@@ -38,7 +38,7 @@ gem "thruster", require: false
 # Web scraping and testing
 gem "nokogiri", "~> 1.18", ">= 1.18.10"
 gem "cuprite", "~> 0.17"
-gem "playwright-ruby-client", "~> 1.55"
+gem "playwright-ruby-client", "~> 1.56"
 
 # Application architecture
 gem "interactor", "~> 3.2"
