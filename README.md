@@ -5,7 +5,7 @@ Project to save copies of GitHub profiles, using Playwright for scraping, SQLite
 ## Setup and Run
 
 1. **Clone the repository**
-  - git clone git@github.com:joaoscotto/gh-profile.git
+  - git clone `git@github.com:joaoscotto/gh-profile.git`
   - cd github-profiles
   - docker compose build
   - docker compose up -d
