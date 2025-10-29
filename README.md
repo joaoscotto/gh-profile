@@ -36,3 +36,15 @@ Configurei o RSpec e implementei alguns testes de exemplo. Tive pouco tempo, ent
 A primeira foi na implementação do scraping. Inicialmente, utilizei o nokogiri, mas a informação de "contribuições do último ano" no GitHub é renderizada via turbo-frame, e como o nokogiri não processa js, precisei de uma ferramenta mais robusta. Escolhi o Playwright por ter uma boa documentação, suporte a JS e manutenções recentes. A instalação, porém, é mais complexa, dependendo de várias bibliotecas e do node.
 
 Outro ponto desafiador foi a interface. No início, tive dificuldade para definir o layout e acabei utilizando apenas ERB com Bootstrap. Pensando agora, depois de finalizado, seria interessante ter implementado com vuejs ou turbo + stimulus, tornaria a interface mais fluida e demonstraria melhor conhecimento em JavaScript.
+
+### Melhorias
+
+- Melhorar a cobertura de testes e implementar testes end-to-end com Capybara
+- Aprimorar o front-end:
+  - Adicionar validações
+  - Exibir indicador de loading ao criar ou editar registros
+  - Evitar que o botão de salvar possa ser clicado várias vezes, gerando múltiplos envios
+  - Indicar que alguns campos podem demorar para atualizar, já que o scraping e o encurtamento de links são executados de forma assíncrona
+- Adicionar o Playwright no Dockerfile de produção
+- Otimizar o processo de scraping; algumas configurações já foram aplicadas, mas acredito que existam ajustes melhores
+- A implementação da busca com FTS5 também pode ser melhorada. Fiz uma implementação inicial rápida, mas é possível aumentar a assertividade da busca e tratar melhor os problemas com caracteres especiais.
