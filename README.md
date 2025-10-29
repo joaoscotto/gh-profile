@@ -23,4 +23,7 @@ Exemplo: `app/services/interactors/github/organizers/profile_scraper_organizer.r
 
 Outro ponto de destaque foi a busca `full-text` com `sqlite`, utilizando o módulo [FTS5](https://sqlite.org/fts5.html) Foi minha primeira experiência com essa funcionalidade, e gostei bastante: é simples de configurar, mas requer atenção para manter os dados da entidade Profile sincronizados com a tabela virtual de busca. Um ponto negativo é que, ao realizar buscas, é necessário escapar caracteres especiais.
 
+Configurei o RSpec e implementei alguns testes de exemplo. Tive pouco tempo, então não consegui fazer uma cobertura mais ampla, mas acredito que já dá para ter uma boa ideia da estrutura. Utilizei a gem factory_bot_rails e segui as convenções recomendadas pelo betterspecs.org.
 
+- https://github.com/joaoscotto/gh-profile/blob/main/spec/controllers/profiles_controller_spec.rb
+- https://github.com/joaoscotto/gh-profile/blob/main/spec/model/profile_spec.rb
