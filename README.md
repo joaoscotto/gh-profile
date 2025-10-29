@@ -2,6 +2,8 @@
 
 Project to save copies of GitHub profiles, using Playwright for scraping, SQLite FTS5 for full-text search, and integration with Short.io to shorten links.
 
+[screen-capture (4).webm](https://github.com/user-attachments/assets/ce7cf36d-1623-4c14-b3f2-914951a890b5)
+
 ## Setup and Run
 
 1. **Clone the repository**
