@@ -208,7 +208,7 @@ GEM
     parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
-    playwright-ruby-client (1.55.0)
+    playwright-ruby-client (1.56.0)
       concurrent-ruby (>= 1.1.6)
       mime-types (>= 3.0)
     pp (0.6.3)
@@ -416,7 +416,7 @@ DEPENDENCIES
   jbuilder
   kamal
   nokogiri (~> 1.18, >= 1.18.10)
-  playwright-ruby-client (~> 1.55)
+  playwright-ruby-client (~> 1.56)
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.3)
