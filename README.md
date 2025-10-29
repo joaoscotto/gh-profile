@@ -1,24 +1,14 @@
-# README
+# Profile Search
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project to save copies of GitHub profiles, using Playwright for scraping, SQLite FTS5 for full-text search, and integration with Short.io to shorten links.
 
-Things you may want to cover:
+## Setup and Run
 
-* Ruby version
+1. **Clone the repository**
+  - git clone git@github.com:joaoscotto/gh-profile.git
+  - cd github-profiles
+  - docker compose build
+  - docker compose up -d
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+2. **Open your browser and go to:**
+  - http://localhost:3000
