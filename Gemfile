@@ -36,18 +36,18 @@ gem "kamal", require: false
 gem "thruster", require: false
 
 # Web scraping and testing
-gem 'nokogiri', '~> 1.18', '>= 1.18.10'
-gem 'cuprite', '~> 0.17'
-gem 'playwright-ruby-client', '~> 1.55'
+gem "nokogiri", "~> 1.18", ">= 1.18.10"
+gem "cuprite", "~> 0.17"
+gem "playwright-ruby-client", "~> 1.55"
 
 # Application architecture
-gem 'interactor', '~> 3.2'
+gem "interactor", "~> 3.2"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
   gem "brakeman", require: false
   gem "rubocop-rails-omakase", require: false
-  gem 'dotenv', '~> 3.1', '>= 3.1.8'
+  gem "dotenv", "~> 3.1", ">= 3.1.8"
 end
 
 group :development do
@@ -56,6 +56,6 @@ end
 
 group :test do
   gem "selenium-webdriver"
-  gem 'rspec-rails', '~> 8.0', '>= 8.0.2'
-  gem 'factory_bot_rails', '~> 6.5', '>= 6.5.1'
+  gem "rspec-rails", "~> 8.0", ">= 8.0.2"
+  gem "factory_bot_rails", "~> 6.5", ">= 6.5.1"
 end
