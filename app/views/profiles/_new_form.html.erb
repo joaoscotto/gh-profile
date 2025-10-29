@@ -1,0 +1,12 @@
+<div class="collapse mb-4" id="create-form">
+  <div class="card card-body bg-dark position-relative">
+    <button
+      type="button"
+      class="btn-close position-absolute top-0 end-0 m-2"
+      data-bs-toggle="collapse"
+      data-bs-target="#create-form"
+    ></button>
+
+    <%= render 'profiles/form', profile: @profile, button_text: 'Save' %>
+  </div>
+</div>

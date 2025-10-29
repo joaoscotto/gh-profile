@@ -1,0 +1,27 @@
+<div class="collapse mt-3" id="details-<%= profile.id %>">
+  <div class="card card-body bg-dark text-light position-relative">
+    <button
+      type="button"
+      class="btn-close position-absolute top-0 end-0 m-2"
+      data-bs-toggle="collapse"
+      data-bs-target="#details-<%= profile.id %>">
+    </button>
+
+    <div class="row">
+      <div class="col-md-6">
+        <p><strong>Name:</strong> <%= profile.name %></p>
+        <p><strong>Username:</strong> <%= profile.username %></p>
+        <p><strong>Url:</strong> <%= link_to profile.url, profile.url, target: "_blank" %></p>
+        <p><strong>Short Url:</strong> <%= link_to profile.short_url, profile.short_url, target: "_blank" %></p>
+        <p><strong>Location:</strong> <%= profile.location.presence || "—" %></p>
+      </div>
+      <div class="col-md-6">
+        <p><strong>Organization:</strong> <%= profile.organization.presence || "—" %></p>
+        <p><strong>Followers:</strong> <%= profile.followers %></p>
+        <p><strong>Following:</strong> <%=profile.following %></p>
+        <p><strong>Stars:</strong> <%= profile.stars %></p>
+        <p><strong>Contributions last year:</strong> <%= profile.last_year_contributions %></p>
+      </div>
+    </div>
+  </div>
+</div>

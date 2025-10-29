@@ -1,10 +1,36 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+.app-container {
+  max-width: 800px;
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: var(--bs-dark-bg-subtle);
+  --bs-body-color: var(--bs-body-color);
+}
+
+.form-control.bg-dark:focus {
+  background-color: var(--bs-gray-dark);
+  border-color: var(--bs-secondary-border-subtle);
+  box-shadow: 0 0 0 var(--bs-focus-ring-width) rgba(var(--bs-secondary-rgb), var(--bs-focus-ring-opacity));
+}
+
+.btn-dark {
+  background-color: var(--bs-dark-bg-subtle);
+  border-color: var(--bs-dark-border-subtle);
+  color: var(--bs-body-color);
+}
+
+.btn-dark:hover {
+  background-color: var(--bs-secondary-bg);
+  border-color: var(--bs-secondary-border-subtle);
+  color: var(--bs-body-color);
+}
+
+a {
+  color: var(--bs-body-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #f8f9fa;
+}

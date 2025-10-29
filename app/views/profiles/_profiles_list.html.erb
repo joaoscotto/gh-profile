@@ -1,0 +1,13 @@
+<% unless @query.nil? %>
+  <div class="list-group">
+    <% if @profiles.any? %>
+      <% @profiles.each do |profile| %>
+        <%= render 'profiles/profile_item', profile: profile %>
+      <% end %>
+    <% else %>
+      <div class="list-group-item list-group-item-dark text-center text-secondary">
+        No profiles found
+      </div>
+    <% end %>
+  </div>
+<% end %>

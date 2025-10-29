@@ -1,0 +1,13 @@
+<%= form_with url: profiles_path, method: :get, local: true do %>
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      name="q"
+      value="<%= params[:q] %>"
+      class="form-control bg-dark text-light"
+      placeholder="Enter your search"
+      autocomplete="off"
+    >
+    <button type="submit" class="btn btn-dark">Search</button>
+  </div>
+<% end %>
