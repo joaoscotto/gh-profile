@@ -17,18 +17,20 @@ class Profile < ApplicationRecord
 
   private
 
-  FTS_FIELDS = [
-    :name, :url, :short_url, :username, :followers, :following,
-    :organization, :location, :stars, :last_year_contributions, :avatar_url
-  ]
-
   def update_fts_index
-    values = FTS_FIELDS.map { |field| self.class.connection.quote(send(field) || "") }.join(", ")
+    fields = %i[
+      name url short_url username followers following
+      organization location stars last_year_contributions avatar_url
+    ]
 
-    self.class.connection.execute(<<~SQL)
-      INSERT OR REPLACE INTO profiles_fts(rowid, #{FTS_FIELDS.join(', ')})
-      VALUES (#{id}, #{values});
+    sql = <<~SQL
+      INSERT OR REPLACE INTO profiles_fts(rowid, #{fields.join(', ')})
+      VALUES (?, #{fields.map { "?" }.join(", ")})
     SQL
+
+    self.class.connection.execute(
+      self.class.sanitize_sql_array([ sql, id ] + fields.map { |field| send(field) || "" })
+    )
   end
 
   def remove_from_fts_index
