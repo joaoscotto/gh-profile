@@ -15,7 +15,9 @@ Project to save copies of GitHub profiles, using Playwright for scraping, SQLite
 
 ---
 
-### Sobre o desafio
+## Sobre o desafio
+
+### Destaques
 
 Para este desafio, utilizei services com a gem Interactor. Embora eu ainda não tenha muita experiência com ela, a abordagem funcionou muito bem para separar e organizar as regras de negócio, especialmente no caso do scraper. 
 Com o uso de organizers, foi possível dividir cada etapa em classes independentes e executá-las em sequência, deixando o código mais legível e de fácil manutenção.
@@ -27,3 +29,10 @@ Configurei o RSpec e implementei alguns testes de exemplo. Tive pouco tempo, ent
 
 - https://github.com/joaoscotto/gh-profile/blob/main/spec/controllers/profiles_controller_spec.rb
 - https://github.com/joaoscotto/gh-profile/blob/main/spec/model/profile_spec.rb
+
+
+### Dificuldades
+
+A primeira foi na implementação do scraping. Inicialmente, utilizei o nokogiri, mas a informação de "contribuições do último ano" no GitHub é renderizada via turbo-frame, e como o nokogiri não processa js, precisei de uma ferramenta mais robusta. Escolhi o Playwright por ter uma boa documentação, suporte a JS e manutenções recentes. A instalação, porém, é mais complexa, dependendo de várias bibliotecas e do node.
+
+Outro ponto desafiador foi a interface. No início, tive dificuldade para definir o layout e acabei utilizando apenas ERB com Bootstrap. Pensando agora, depois de finalizado, seria interessante ter implementado com vuejs ou turbo + stimulus, tornaria a interface mais fluida e demonstraria melhor conhecimento em JavaScript.
